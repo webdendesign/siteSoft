@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sitesoft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/Lora-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="jquery-3.2.1.min.js"></script>
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async=""></script>
+</head>
+
+<body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__container">
+        <a class="page-header__logo" href="#">
+          <img src="img/icon-logo.svg" width="111" height="24" alt="logo">
+        </a>
+        <select class="page-header__select" name="language">
+          <option>in English</option>
+          <option>in Russia</option>
+        </select>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__container">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+            <svg class="main-nav__burger" version="1.0" xmlns="http://www.w3.org/2000/svg" width="49.945"
+              height="24.007">
+              <path
+                d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z" />
+              <path
+                d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z" />
+            </svg>
+            <svg class="main-nav__cross" version="1.0" xmlns="http://www.w3.org/2000/svg" width="23.867"
+              height="23.867">
+              <path
+                d="M15.087 11.933l8.56-8.559a.75.75 0 000-1.061L21.554.22a.747.747 0 00-1.06 0l-8.561 8.56L3.373.22a.771.771 0 00-1.061 0L.22 2.313a.75.75 0 000 1.061l8.56 8.559-8.56 8.559a.751.751 0 000 1.062l2.093 2.094a.744.744 0 001.06 0l8.561-8.56 8.56 8.56a.746.746 0 001.06 0l2.093-2.094a.751.751 0 000-1.062l-8.56-8.559z" />
+            </svg>
+          </button>
+        </div>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav site-list">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link site-list__link--new" href="#">Features</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Blog</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <section class="promo">
+      <div class="container">
+        <div class="promo__wrapper">
+          <div class="promo__header">
+            <h1 class="promo__title">How I Lost The Secret Of Dazzling Success For 20 Years</h1>
+            <button class="promo__btn">Explore now</button>
+            <p class="promo__text">6 Powerful Tips To Creating Testimonials That Sell Your Products Fast</p>
+          </div>
+          <ul class="promo__list">
+            <li class="promo__item">
+              <img src="img/photo-see.jpg" alt="see">
+              <div class="promo__block">
+                <p class="promo__data">29 Jun 2018</p>
+                <p class="promo__name">Free Classifieds Using Them To Promote Your Stuff Online</p>
+                <p class="promo__description">Moreover the striking, brilliant and vivid colors are the reason why we
+                  are
+                  attracted to the posters that we see.</p>
+              </div>
+            </li>
+            <li class="promo__item">
+              <img src="img/photo-apex.jpg" alt="apex">
+              <div class="promo__block">
+                <p class="promo__data">04 Jul 2018</p>
+                <p class="promo__name">Research In Advertising</p>
+                <p class="promo__description">To a general advertiser outdoor advertising is worthy of consideration.
+                  Outdoor advertising is considered as the oldest form of advertising.</p>
+              </div>
+            </li>
+            <li class="promo__item">
+              <img src="img/photo-hill.jpg" alt="hill">
+              <div class="promo__block">
+                <p class="promo__data">25 Aug 2018</p>
+                <p class="promo__name">Welcome To Desiclassifieds Free Classifieds Free Ads Free Advertisement</p>
+                <p class="promo__description">There are several ways people can make money online. From selling products
+                  to advertising.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container">
+        <div class="popular__wrapper">
+          <div class="popular__header">
+            <h2 class="popular__title">Popular</h2>
+            <ul class="popular__menu">
+              <li class="popular__item">
+                <a class="popular__link popular__link--active" href="#">Today</a>
+              </li>
+              <li class="popular__item">
+                <a class="popular__link" href="#">This week</a>
+              </li>
+              <li class="popular__item">
+                <a class="popular__link" href="#">Month</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="popular__list">
+            <li class="popular__list-item">
+              <p class="popular__data">02 Sep 2018</p>
+              <p class="popular__name">It S Classified How To Utilize Free Classified Ad Sites To Boost Business</p>
+              <p class="popular__description">Marketers/advertisers usually focus their efforts on the people
+                responsible
+                for making the purchase.</p>
+            </li>
+            <li class="popular__list-item">
+              <p class="popular__data">04 Jun 2018</p>
+              <p class="popular__name">12 Handy Tips For Generating Leads Through Cold Calling</p>
+              <p class="popular__description">I want to talk about to things that are quite important to me. There are
+                love and one my personal inadequacies.</p>
+            </li>
+            <li class="popular__list-item">
+              <p class="popular__data">08 Mar 2018</p>
+              <p class="popular__name">Make Money Online Through Advertising</p>
+              <p class="popular__description">Conversations can be a tricky business. Sometimes, decoding what is said
+                with what is meant is difficult at best.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="content__header" id="slider-wrap">
+        <div id="active-slide">
+          <button class="content__arrow-left" id="prewbutton"><span class="visually-hidden">Сдвинуть
+              влево</span>
+            <svg class="content__left" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
+                <path d="M17.835 3.86998L16.055 2.09998L6.165 12L16.065 21.9L17.835 20.13L9.705 12L17.835 3.86998Z"
+                  fill="white" />
+              </mask>
+              <g mask="url(#mask0)">
+                <rect width="24" height="24" fill="#373B52" />
+              </g>
+            </svg>
+          </button>
+          <button class="content__arrow-right" id="nextbutton"><span class="visually-hidden">Сдвинуть
+              вправо</span>
+            <svg class="content__right" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
+                <path
+                  d="M6.16504 20.13L7.93504 21.9L17.835 12L7.93504 2.09998L6.16504 3.86998L14.295 12L6.16504 20.13H6.16504Z"
+                  fill="white" />
+              </mask>
+              <g mask="url(#mask0)">
+                <rect width="24" height="24" fill="#373B52" />
+              </g>
+            </svg>
+          </button>
+          <div id="slider">
+            <div class="slide"><img src="img/bg-fon.jpg"></div>
+            <div class="slide"><img src="img/bg-fon1.jpg"></div>
+            <div class="slide"><img src="img/bg-fon2.jpg"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="content__wrapper">
+            <p class="content__data">27 Nov 2018</p>
+            <h2 class="content__title">Consumer Psychology In The Industrial And Manufacturing Equipment Marketplace
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content__main">
+          <div class="content__main-left">
+            <h3 class="content__slogan">How I Lost The Secret Of Dazzling Success For 20 Years</h3>
+            <div class="content__block-author">
+              <img src="img/photo-author.png" width="40" height="40" alt="photo">
+              <div class="content__author">
+                <p class="content__name">Harold Holland</p>
+                <p class="content__description">Editor in chief, Entrepreneur mag. Host of the podcast Pessimists
+                  Archive.</p>
+              </div>
+            </div>
+            <p class="content__text content__text--height">There is such a lot of talk going around about branding,
+              but
+              what exactly is your
+              brand and how do you use it to help you reach more people and market your products or services? Your
+              brand is the core of your marketing, the central theme around your products and services.</p>
+            <p class="content__text">Your brand is not your Logo or your Company Name, unless of course you are <a
+                href="#">Microsoft</a> or
+              the Yellow Pages online directory.
+            </p>
+            <ul class="content__list">
+              <li class="content__item">Study 800 Numbers Still Popular With Advertisers</li>
+              <li class="content__item">A Right Media Mix Can Make The Difference</li>
+              <li class="content__item">Advertise No Matter If You Are Big Or Small</li>
+            </ul>
+            <h2 class="content__subchapter">Getting Free Publicity For Your Business</h2>
+            <p class="content__text content__text--height">For people to come and hire you, or buy from you in droves,
+              your brand needs to
+              be crystal clear, attractive, exciting and powerful. In fact your brand needs to be powerful enough to
+              rouse your customers into action, and at the same time it needs to actively express you, what you’re
+              about and your uniqueness.</p>
+            <p class="content__text">Once you’re sure of your brand you also gain a tangible and
+              easy way of talking to
+              people about <span class="content__bg">what you
+                do. It makes it so much easier to do your marketing when you have it clear in your mind what it is
+                you’re selling in the first place.</span> When you’re creating your brand you are creating a memorable
+              marketing message that will inspire people to take action and choose you over your competitors.</p>
+            <button class="content__btn">Load more</button>
+          </div>
+          <div class="content__main-right">
+            <div class="content__top faq">
+              <ul class="faq__list">
+                <li class="faq__item">
+                  <div class="faq__block">
+                    <h3 class="faq__title">The Function Of The Logo</h3>
+                    <button class="faq__toggle faq__toggle--open" type="button" aria-label="Title toggle"></button>
+                  </div>
+                  <p class="faq__desc">Forget Ebay and other forms of advertising for your property that costs you hard
+                    earned money. Why not do it all for free? Investment Assets Properties have ready several locations
+                    around the world to take your free listings for any luxury property you have.</p>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__block faq__hide-question">
+                    <h3 class="faq__title">Free Advertising For Your Online Business</h3>
+                    <button class="faq__toggle faq__toggle--close" type="button" aria-label="Title toggle"></button>
+                  </div>
+                  <p class="faq__desc">Forget Ebay and other forms of advertising for your property that costs you hard
+                    earned money. Why not do it all for free? Investment Assets Properties have ready several locations
+                    around the world to take your free listings for any luxury property you have.</p>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__block faq__hide-question">
+                    <h3 class="faq__title">Advertising Internet Online Opportunities To Explore</h3>
+                    <button class="faq__toggle faq__toggle--close" type="button" aria-label="Title toggle"></button>
+                  </div>
+                  <p class="faq__desc">Forget Ebay and other forms of advertising for your property that costs you hard
+                    earned money. Why not do it all for free? Investment Assets Properties have ready several locations
+                    around the world to take your free listings for any luxury property you have.</p>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__block faq__hide-question">
+                    <h3 class="faq__title">Nailing It On The Head With Free Internet Advertising</h3>
+                    <button class="faq__toggle faq__toggle--close" type="button" aria-label="Title toggle"></button>
+                  </div>
+                  <p class="faq__desc">Forget Ebay and other forms of advertising for your property that costs you hard
+                    earned money. Why not do it all for free? Investment Assets Properties have ready several locations
+                    around the world to take your free listings for any luxury property you have.</p>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__block faq__hide-question">
+                    <h3 class="faq__title">Free Real Estate Listings</h3>
+                    <button class="faq__toggle faq__toggle--close" type="button" aria-label="Title toggle"></button>
+                  </div>
+                  <p class="faq__desc">Forget Ebay and other forms of advertising for your property that costs you hard
+                    earned money. Why not do it all for free? Investment Assets Properties have ready several locations
+                    around the world to take your free listings for any luxury property you have.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="content__bottom">
+              <p class="content__number">27 Jul 2018</p>
+              <p class="content__write">Why Do You Need To Join An Affiliate Marketing Network</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="container">
+        <div class="feedback__wrapper">
+          <h1 class="feedback__title">Choosing The Best Audio Player Software For Your Computer</h1>
+          <p class="feedback__text">If you having trouble about creating a good 4 color poster print, a 4 color printing
+            company that has 4 color poster printing service may be able to help you made your poster.</p>
+          <form class="feedback__form">
+            <fieldset>
+              <legend><span class="visually-hidden">Feedback</span></legend>
+              <ul class="feedback__list">
+                <li class="feedback__item">
+                  <input class="feedback__input" type="text" name="" placeholder="First name" required="">
+                </li>
+                <li class="feedback__item">
+                  <input class="feedback__input" type="text" name="name" placeholder="Last name" required="">
+                </li>
+                <li class="feedback__item">
+                  <input class="feedback__input" type="email" name="email" placeholder="Email">
+                </li>
+                <li class="feedback__item">
+                  <input class="feedback__input" type="text" name="address" placeholder="Address" required="">
+                </li>
+                <li class="feedback__item feedback__item--checkbox">
+                  <label class="feedback__checkbox">
+                    <input class="visually-hidden" type="checkbox" checked="">
+                    <span class="input-checkbox"></span>
+                    <span class="feedback__checkbox-text">I confirm and agree to the processing of my data and
+                      information about myself</span>
+                  </label>
+                </li>
+                <li class="feedback__item feedback__item--select">
+                  <select class="feedback__select" name="language">
+                    <option class="feedback__placeholder">Country</option>
+                    <option class="feedback__placeholder--grey">Austria</option>
+                    <option>Latvia</option>
+                    <option>Finland</option>
+                    <option>Russia</option>
+                  </select>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="feedback__btn">Send report</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="#">
+          <img src="img/icon-logo.svg" width="111" height="24" alt="logo">
+        </a>
+        <div class="page-footer__block">
+          <ul class="page-footer__offer-list">
+            <li class="page-footer__offer-item">
+              <a href="#">What’s new</a>
+            </li>
+            <li class="page-footer__offer-item">
+              <a href="#">Explore</a>
+            </li>
+            <li class="page-footer__offer-item">
+              <a href="#">All features</a>
+            </li>
+            <li class="page-footer__offer-item">
+              <a href="#">Price</a>
+            </li>
+          </ul>
+          <ul class="page-footer__information-list">
+            <li class="page-footer__information-item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="page-footer__information-item">
+              <a href="#">About</a>
+            </li>
+            <li class="page-footer__information-item">
+              <a href="#">Documentation</a>
+            </li>
+            <li class="page-footer__information-item">
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="page-footer__contact-list">
+          <li class="page-footer__contact-item page-footer__contact-item--address">
+            0547 Leola Summit Apt. 220
+          </li>
+          <li class="page-footer__contact-item page-footer__contact-item--phone">
+            582-261-9142
+          </li>
+          <li class="page-footer__contact-item page-footer__contact-item--email">
+            mozelle_heathcote@hotmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+
+</body>
+
+</html>

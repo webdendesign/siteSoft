@@ -1,0 +1,111 @@
+.popular__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-bottom: 1px solid $cl-grey;
+}
+
+.popular__title {
+  margin: 0 0 7px;
+  padding: 0;
+  font-family: $fn-name;
+  font-weight: $fn-weight-extra;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.08px;
+  color: $fn-grey-dark;
+}
+
+.popular__menu {
+  @include list();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.popular__link {
+  font-family: $fn-name;
+  font-weight: $fn-weight-semi;
+  font-size: $fn-size12;
+  color: $fn-grey-dark;
+
+  &--active {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1px;
+      background: $fn-red;
+    }
+  }
+}
+
+.popular__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular__list-item {
+  margin: 0 0 20px;
+}
+
+.popular__data {
+  margin: 0;
+  font-family: $fn-name;
+  font-size: $fn-size12;
+  color: $fn-grey-light;
+}
+
+.popular__name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $fn-name;
+  font-weight: $fn-weight-semi;
+  color: $fn-grey-dark;
+}
+
+.popular__description{
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $desktop-little-width) {
+  .popular__header {
+    flex-direction: row;
+    margin-bottom: 32px;
+  }
+
+  .popular__link {
+    &::before {
+      left: -10px;
+      bottom: -19px;
+      width: 170%;
+    }
+  }
+
+  .popular__list {
+    flex-direction: row;
+  }
+
+  .popular__list-item {
+    margin: 0;
+    width: 290px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popular__list-item {
+    width: 352px;
+  }
+}

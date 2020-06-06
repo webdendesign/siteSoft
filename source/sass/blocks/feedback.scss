@@ -1,0 +1,250 @@
+.feedback {
+  padding: 32px 0;
+  border-top: 1px solid $cl-grey;
+  border-bottom: 1px solid $cl-grey;
+  overflow: hidden;
+}
+
+.feedback__title {
+  margin: 0 auto 32px;
+  font-family: $fn-name;
+  font-weight: $fn-weight-extra;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.16px;
+}
+
+.feedback__text {
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.feedback__form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.feedback__list {
+  @include list;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.feedback__item {
+  margin-bottom: 16px;
+
+  &--checkbox {
+    margin-bottom: 32px;
+  }
+}
+
+.feedback__input {
+  padding: 0 0 0 16px;
+  width: 280px;
+  min-height: 48px;
+  border: 1px solid $cl-grey;
+  box-sizing: border-box;
+  border-radius: 1px;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: $fn-weight-semi;
+  font-size: 12px;
+  line-height: 24px;
+  color: #373B52;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid blue;
+  }
+}
+
+.feedback__select {
+  padding: 0 0 0 16px;
+  width: 280px;
+  min-height: 48px;
+  border: 1px solid $cl-grey;
+  box-sizing: border-box;
+  border-radius: 1px;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: $fn-grey-light;
+  cursor: pointer;
+  background: transparent;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid blue;
+  }
+}
+
+.feedback__item input::placeholder {
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: $fn-grey-light;
+}
+
+.feedback__list li:last-child {
+  margin-bottom: 32px;
+}
+
+.feedback__item--checkbox .feedback__checkbox {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.feedback__list input[type="checkbox"] + .input-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $fn-red;
+  border-radius: 2px;
+}
+
+.feedback__list input[type="checkbox"] + .input-checkbox::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid $bg-white;
+  border-bottom: 2px solid $bg-white;
+  transform: rotate(-45deg);
+}
+
+.feedback__list input[type="checkbox"]:checked + .input-checkbox::after {
+  display: inline-block;
+}
+
+.feedback__list input[type="checkbox"]:checked + .input-checkbox::before {
+  background-color: $fn-red;
+}
+
+.feedback__checkbox-text {
+  display: block;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: $fn-weight-semi;
+  font-size: $fn-size12;
+  line-height: 24px;
+}
+
+.feedback__item--select {
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon-open.svg");
+    cursor: pointer;
+  }
+}
+
+.feedback__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 220px;
+  height: 48px;
+  border: none;
+  background: $bg-white;
+  box-shadow: 0px 8px 24px rgba(57, 96, 204, 0.48);
+  border-radius: 1px;
+  cursor: pointer;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: $fn-weight-semi;
+  font-size: 16px;
+  align-items: center;
+  line-height: 24px;
+  color: $fn-red;
+
+  &:hover,
+  &:focus {
+    border: 1px solid blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__list {
+    width: 352px;
+    margin: 0 auto;
+  }
+
+  .feedback__input {
+    width: 352px;
+  }
+
+  .feedback__select {
+    width: 352px;
+  }
+
+  .feedback__item--checkbox .feedback__checkbox {
+    width: 322px;
+  }
+}
+
+@media (min-width: $desktop-little-width) {
+  .feedback {
+    padding: 64px 0;
+  }
+
+  .feedback__title {
+    margin: 0 auto 32px;
+    width: 736px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .feedback__text {
+    width: 736px;
+  }
+
+  .feedback__btn {
+    width: 352px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    padding: 64px 0;
+  }
+
+  .feedback__title {
+    margin: 0 auto 32px;
+    width: 736px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .feedback__text {
+    width: 736px;
+  }
+
+  .feedback__btn {
+    width: 352px;
+  }
+}
