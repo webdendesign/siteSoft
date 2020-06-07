@@ -34,6 +34,7 @@
 }
 
 .feedback__item {
+  position: relative;
   margin-bottom: 16px;
 
   &--checkbox {
@@ -42,6 +43,8 @@
 }
 
 .feedback__input {
+  z-index: 1;
+  position: relative;
   padding: 0 0 0 16px;
   width: 280px;
   min-height: 48px;
@@ -55,6 +58,7 @@
   line-height: 24px;
   color: #373B52;
   cursor: pointer;
+  background: transparent;
 
   &:hover,
   &:focus {
@@ -62,36 +66,47 @@
   }
 }
 
-.feedback__select {
-  padding: 0 0 0 16px;
+.feedback__name {
+  position: absolute;
+  top: 0;
   width: 280px;
   min-height: 48px;
-  border: 1px solid $cl-grey;
-  box-sizing: border-box;
-  border-radius: 1px;
-  font-family: $fn-name;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 24px;
-  color: $fn-grey-light;
-  cursor: pointer;
-  background: transparent;
-  appearance: none;
 
-  &:hover,
-  &:focus {
-    border: 1px solid blue;
+  &::before {
+    position: absolute;
+    content: "First name";
+    top: 12px;
+    left: 16px;
+    font-family: $fn-name;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    color: $fn-grey-light;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: "First name";
+    top: 6px;
+    left: 16px;
+    font-family: $fn-name;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: $fn-grey-light;
+    letter-spacing: 0.16px;
   }
 }
 
-.feedback__item input::placeholder {
-  font-family: $fn-name;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 24px;
-  color: $fn-grey-light;
+.feedback__input--name:focus + .feedback__name--label::before {
+  display: none;
+}
+
+.feedback__input--name:focus + .feedback__name--label::after {
+  display: block;
 }
 
 .feedback__list li:last-child {
@@ -145,6 +160,28 @@
   font-weight: $fn-weight-semi;
   font-size: $fn-size12;
   line-height: 24px;
+}
+
+.feedback__select {
+  padding: 0 0 0 16px;
+  width: 280px;
+  min-height: 48px;
+  border: 1px solid $cl-grey;
+  border-radius: 1px;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: $fn-grey-light;
+  cursor: pointer;
+  background: transparent;
+  appearance: none !important;
+
+  &:hover,
+  &:focus {
+    border: 1px solid blue;
+  }
 }
 
 .feedback__item--select {
@@ -208,27 +245,6 @@
 }
 
 @media (min-width: $desktop-little-width) {
-  .feedback {
-    padding: 64px 0;
-  }
-
-  .feedback__title {
-    margin: 0 auto 32px;
-    width: 736px;
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  .feedback__text {
-    width: 736px;
-  }
-
-  .feedback__btn {
-    width: 352px;
-  }
-}
-
-@media (min-width: $desktop-width) {
   .feedback {
     padding: 64px 0;
   }

@@ -155,11 +155,11 @@
     </section>
 
     <section class="content">
-      <div class="content__header" id="slider-wrap">
+      <div class="content__header slider">
         <div id="active-slide">
-          <button class="content__arrow-left" id="prewbutton"><span class="visually-hidden">Сдвинуть
+          <button class="slider__arrow-left" id="prewbutton"><span class="visually-hidden">Сдвинуть
               влево</span>
-            <svg class="content__left" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <svg class="slider__left" width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
                 <path d="M17.835 3.86998L16.055 2.09998L6.165 12L16.065 21.9L17.835 20.13L9.705 12L17.835 3.86998Z"
@@ -170,9 +170,9 @@
               </g>
             </svg>
           </button>
-          <button class="content__arrow-right" id="nextbutton"><span class="visually-hidden">Сдвинуть
+          <button class="slider__arrow-right" id="nextbutton"><span class="visually-hidden">Сдвинуть
               вправо</span>
-            <svg class="content__right" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <svg class="slider__right" width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
                 <path
@@ -184,10 +184,9 @@
               </g>
             </svg>
           </button>
-          <div id="slider">
-            <div class="slide"><img src="img/bg-fon.jpg"></div>
-            <div class="slide"><img src="img/bg-fon1.jpg"></div>
-            <div class="slide"><img src="img/bg-fon2.jpg"></div>
+          <div id="slider-wrap">
+            <div class="slide"><img src="img/bg-fog.jpg" alt="fog"></div>
+            <div class="slide"><img src="img/bg-mountain.jpg" alt="mountain"></div>
           </div>
         </div>
         <div class="container">
@@ -309,16 +308,17 @@
               <legend><span class="visually-hidden">Feedback</span></legend>
               <ul class="feedback__list">
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="" placeholder="First name" required="">
+                  <input class="feedback__input feedback__input--name" type="text" name="" required="">
+                  <label class="feedback__name feedback__name--label"></label>
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="name" placeholder="Last name" required="">
+                  <input class="feedback__input" type="text" name="name" required="">
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="email" name="email" placeholder="Email">
+                  <input class="feedback__input" type="email" name="email">
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="address" placeholder="Address" required="">
+                  <input class="feedback__input" type="text" name="address" required="">
                 </li>
                 <li class="feedback__item feedback__item--checkbox">
                   <label class="feedback__checkbox">

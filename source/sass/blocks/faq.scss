@@ -64,15 +64,13 @@
   margin: 25px 0 0;
 }
 
-@media (max-width: $tablet-width) {
-
-}
-
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-little-width) {
   .faq {
     margin: 64px 0 32px;
   }
+}
 
+@media (min-width: $desktop-width) {
   .faq__item {
     padding: 24px 24px;
   }
