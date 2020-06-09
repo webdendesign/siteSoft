@@ -308,17 +308,20 @@
               <legend><span class="visually-hidden">Feedback</span></legend>
               <ul class="feedback__list">
                 <li class="feedback__item">
-                  <input class="feedback__input feedback__input--name" type="text" name="" required="">
-                  <label class="feedback__name feedback__name--label"></label>
+                  <input class="feedback__input" type="text" id="first name" required="">
+                  <label class="feedback__label feedback__label--first-name" for="first name"></label>
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="name" required="">
+                  <input class="feedback__input" type="text" name="last name" required="">
+                  <label class="feedback__label feedback__label--last-name" for="last name"></label>
                 </li>
                 <li class="feedback__item">
                   <input class="feedback__input" type="email" name="email">
+                  <label class="feedback__label feedback__label--email" for="email"></label>
                 </li>
                 <li class="feedback__item">
                   <input class="feedback__input" type="text" name="address" required="">
+                  <label class="feedback__label feedback__label--address" for="address"></label>
                 </li>
                 <li class="feedback__item feedback__item--checkbox">
                   <label class="feedback__checkbox">
@@ -328,14 +331,15 @@
                       information about myself</span>
                   </label>
                 </li>
-                <li class="feedback__item feedback__item--select">
-                  <select class="feedback__select" name="language">
-                    <option class="feedback__placeholder">Country</option>
-                    <option class="feedback__placeholder--grey">Austria</option>
-                    <option>Latvia</option>
-                    <option>Finland</option>
-                    <option>Russia</option>
-                  </select>
+                <li class="feedback__item">
+                  <label class="feedback__label feedback__label--select">
+                    <select class="feedback__select">
+                      <option></option>
+                      <option>Latvia</option>
+                      <option>Finland</option>
+                      <option>Russia</option>
+                    </select>
+                  </label>
                 </li>
               </ul>
             </fieldset>

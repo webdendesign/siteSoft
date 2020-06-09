@@ -9,7 +9,7 @@
   margin: 0 auto 32px;
   font-family: $fn-name;
   font-weight: $fn-weight-extra;
-  font-size: 24px;
+  font-size: $fn-size24;
   line-height: 30px;
   text-align: center;
   letter-spacing: 0.16px;
@@ -35,6 +35,8 @@
 
 .feedback__item {
   position: relative;
+  width: 280px;
+  min-height: 48px;
   margin-bottom: 16px;
 
   &--checkbox {
@@ -54,9 +56,9 @@
   font-family: $fn-name;
   font-style: normal;
   font-weight: $fn-weight-semi;
-  font-size: 12px;
+  font-size: $fn-size12;
   line-height: 24px;
-  color: #373B52;
+  color: $fn-grey-dark;
   cursor: pointer;
   background: transparent;
 
@@ -66,46 +68,91 @@
   }
 }
 
-.feedback__name {
+.feedback__label {
   position: absolute;
   top: 0;
+  left: 0;
   width: 280px;
-  min-height: 48px;
+  height: 48px;
 
-  &::before {
-    position: absolute;
-    content: "First name";
-    top: 12px;
-    left: 16px;
-    font-family: $fn-name;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 24px;
-    color: $fn-grey-light;
+  &--first-name,
+  &--last-name,
+  &--email,
+  &--address,
+  &--select {
+    &::before {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      font-family: $fn-name;
+      font-style: normal;
+      font-weight: $fn-weight-semi;
+      color: $fn-grey-light;
+      font-size: $fn-size12;
+      line-height: 24px;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      top: 6px;
+      left: 16px;
+      font-family: $fn-name;
+      font-style: normal;
+      font-weight: $fn-weight-semi;
+      color: $fn-grey-light;
+      font-size: $fn-size10;
+      line-height: 12px;
+      letter-spacing: 0.16px;
+    }
   }
 
-  &::after {
-    display: none;
-    position: absolute;
-    content: "First name";
-    top: 6px;
-    left: 16px;
-    font-family: $fn-name;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 12px;
-    color: $fn-grey-light;
-    letter-spacing: 0.16px;
+  &--first-name {
+    &::before,
+    &::after {
+      content: "First name";
+    }
+  }
+
+  &--last-name {
+    &::before,
+    &::after {
+      content: "Last name";
+    }
+  }
+
+  &--email {
+    &::before,
+    &::after {
+      content: "Email";
+    }
+  }
+
+  &--address {
+    &::before,
+    &::after {
+      content: "Address";
+    }
+  }
+
+  &--select {
+    &::before {
+      content: "";
+      background-color: #FFFFFF;
+    }
+
   }
 }
 
-.feedback__input--name:focus + .feedback__name--label::before {
+.feedback__input:focus + .feedback__label::before {
   display: none;
 }
 
-.feedback__input--name:focus + .feedback__name--label::after {
+.feedback__select:focus .feedback__label--select::before {
+  content: "";
+}
+
+.feedback__input:focus + .feedback__label::after {
   display: block;
 }
 
@@ -163,6 +210,7 @@
 }
 
 .feedback__select {
+  position: relative;
   padding: 0 0 0 16px;
   width: 280px;
   min-height: 48px;
@@ -176,27 +224,10 @@
   color: $fn-grey-light;
   cursor: pointer;
   background: transparent;
-  appearance: none !important;
 
   &:hover,
   &:focus {
     border: 1px solid blue;
-  }
-}
-
-.feedback__item--select {
-  position: relative;
-
-  &::before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 24px;
-    height: 24px;
-    background-image: url("../img/icon-open.svg");
-    cursor: pointer;
   }
 }
 

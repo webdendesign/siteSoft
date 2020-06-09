@@ -15,7 +15,7 @@
   padding: 0;
   font-family: $fn-name;
   font-weight: $fn-weight-extra;
-  font-size: 24px;
+  font-size: $fn-size24;
   line-height: 30px;
   letter-spacing: 0.1px;
 }
@@ -124,7 +124,7 @@
   .promo__title {
     width: 544px;
     padding-top: 208px;
-    font-size: 40px;
+    font-size: $fn-size40;
     line-height: 48px;
     letter-spacing: 0.16px;
   }
@@ -149,29 +149,9 @@
 @media (min-width: $desktop-width) {
   .promo {
     margin-top: -80px;
-    min-height: 720px;
-  }
-
-  .promo__wrapper {
-    padding-top: 0;
-  }
-
-  .promo__title {
-    width: 544px;
-    padding-top: 208px;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0.16px;
-  }
-
-  .promo__list {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 128px 0 32px;
   }
 
   .promo__item {
-    margin: 0;
     width: 352px;
   }
 

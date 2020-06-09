@@ -57,34 +57,35 @@
   position: relative;
   padding-left: 30px;
 
+  &--address,
+  &--phone,
+  &--email {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   &--address::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
     background-image: url("../img/icon-marker.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   &--phone::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
     background-image: url("../img/icon-phone.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   &--email::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
     background-image: url("../img/icon-email.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -102,11 +103,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-@media (min-width: $tablet-width) {
-
-
 }
 
 @media (min-width: $desktop-little-width) {
