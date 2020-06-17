@@ -35,8 +35,6 @@
 
 .feedback__item {
   position: relative;
-  width: 280px;
-  min-height: 48px;
   margin-bottom: 16px;
 
   &--checkbox {
@@ -78,8 +76,7 @@
   &--first-name,
   &--last-name,
   &--email,
-  &--address,
-  &--select {
+  &--address {
     &::before {
       position: absolute;
       top: 12px;
@@ -134,14 +131,10 @@
       content: "Address";
     }
   }
+}
 
-  &--select {
-    &::before {
-      content: "";
-      background-color: #FFFFFF;
-    }
-
-  }
+.feedback__label--select::-ms-expand {
+  display: none;
 }
 
 .feedback__input:focus + .feedback__label::before {
@@ -149,7 +142,8 @@
 }
 
 .feedback__select:focus .feedback__label--select::before {
-  content: "";
+  width: 0;
+  height: 0;
 }
 
 .feedback__input:focus + .feedback__label::after {
@@ -209,7 +203,34 @@
   line-height: 24px;
 }
 
-.feedback__select {
+.feedback__label-select {
+  &::before {
+    z-index: 1;
+    position: absolute;
+    content: "Country";
+    top: 12px;
+    left: 16px;
+    font-family: $fn-name;
+    font-style: normal;
+    font-weight: $fn-weight-semi;
+    color: $fn-grey-light;
+    font-size: $fn-size12;
+    line-height: 24px;
+    background-color: transparent;
+  }
+
+  &::after {
+    position: absolute;
+    content: url("../img/icon-open.svg");
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 12px;
+    pointer-events: none;
+  }
+}
+
+.feedback__item select {
   position: relative;
   padding: 0 0 0 16px;
   width: 280px;
@@ -218,17 +239,21 @@
   border-radius: 1px;
   font-family: $fn-name;
   font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: $fn-weight-semi;
+  font-size: $fn-size12;
   line-height: 24px;
-  color: $fn-grey-light;
+  color: $fn-grey-dark;
   cursor: pointer;
-  background: transparent;
+  background: #FFFFFF;
+  appearance: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid blue;
   }
+}
+
+.feedback__item select::-ms-expand {
+  display: none;
 }
 
 .feedback__btn {
@@ -266,7 +291,7 @@
     width: 352px;
   }
 
-  .feedback__select {
+  .feedback__item select {
     width: 352px;
   }
 
