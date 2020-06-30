@@ -43,9 +43,7 @@
 }
 
 .feedback__input {
-  z-index: 1;
-  position: relative;
-  padding: 0 0 0 16px;
+  padding: 18px 0 0 16px;
   width: 280px;
   min-height: 48px;
   border: 1px solid $cl-grey;
@@ -62,92 +60,32 @@
 
   &:hover,
   &:focus {
-    border: 1px solid blue;
+    outline: 2px solid $bg-pink;
+  }
+
+  &:invalid {
+    border: 1px solid $fn-red;
   }
 }
 
 .feedback__label {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 48px;
-
-  &--first-name,
-  &--last-name,
-  &--email,
-  &--address {
-    &::before {
-      position: absolute;
-      top: 12px;
-      left: 16px;
-      font-family: $fn-name;
-      font-style: normal;
-      font-weight: $fn-weight-semi;
-      color: $fn-grey-light;
-      font-size: $fn-size12;
-      line-height: 24px;
-    }
-
-    &::after {
-      display: none;
-      position: absolute;
-      top: 6px;
-      left: 16px;
-      font-family: $fn-name;
-      font-style: normal;
-      font-weight: $fn-weight-semi;
-      color: $fn-grey-light;
-      font-size: $fn-size10;
-      line-height: 12px;
-      letter-spacing: 0.16px;
-    }
-  }
-
-  &--first-name {
-    &::before,
-    &::after {
-      content: "First name";
-    }
-  }
-
-  &--last-name {
-    &::before,
-    &::after {
-      content: "Last name";
-    }
-  }
-
-  &--email {
-    &::before,
-    &::after {
-      content: "Email";
-    }
-  }
-
-  &--address {
-    &::before,
-    &::after {
-      content: "Address";
-    }
-  }
+  top: 12px;
+  left: 16px;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: $fn-weight-semi;
+  color: $fn-grey-light;
+  font-size: $fn-size12;
+  line-height: 24px;
+  transition: all 0.5s;
 }
 
-.feedback__label--select::-ms-expand {
-  display: none;
-}
-
-.feedback__input:focus + .feedback__label::before {
-  display: none;
-}
-
-.feedback__select:focus .feedback__label--select::before {
-  width: 0;
-  height: 0;
-}
-
-.feedback__input:focus + .feedback__label::after {
-  display: block;
+.feedback__item--active .feedback__label {
+  top: 6px;
+  font-size: $fn-size10;
+  line-height: 12px;
+  letter-spacing: 0.16px;
 }
 
 .feedback__list li:last-child {
@@ -157,28 +95,33 @@
 .feedback__item--checkbox .feedback__checkbox {
   position: relative;
   display: flex;
-  padding-left: 30px;
-  width: 250px;
+  padding-left: 36px;
+  width: 244px;
   cursor: pointer;
 }
 
 .feedback__list input[type="checkbox"] + .input-checkbox::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
   width: 20px;
   height: 20px;
-  border: 1px solid $fn-red;
+  border: 1px solid $cl-grey;
   border-radius: 2px;
+}
+
+.feedback__list input[type="checkbox"]:hover + .input-checkbox::before,
+.feedback__list input[type="checkbox"]:focus + .input-checkbox::before {
+  border-color: $fn-red;
 }
 
 .feedback__list input[type="checkbox"] + .input-checkbox::after {
   display: none;
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   width: 11px;
   height: 6px;
   border-left: 2px solid $bg-white;
@@ -191,6 +134,7 @@
 }
 
 .feedback__list input[type="checkbox"]:checked + .input-checkbox::before {
+  border: 1px solid $fn-red;
   background-color: $fn-red;
 }
 
@@ -204,34 +148,20 @@
 }
 
 .feedback__label-select {
-  &::before {
-    z-index: 1;
-    position: absolute;
-    content: "Country";
-    top: 12px;
-    left: 16px;
-    font-family: $fn-name;
-    font-style: normal;
-    font-weight: $fn-weight-semi;
-    color: $fn-grey-light;
-    font-size: $fn-size12;
-    line-height: 24px;
-    background-color: transparent;
-  }
-
-  &::after {
-    position: absolute;
-    content: url("../img/icon-open.svg");
-    width: 24px;
-    height: 24px;
-    right: 0;
-    top: 12px;
-    pointer-events: none;
-  }
+  z-index: 2;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-family: $fn-name;
+  font-style: normal;
+  font-weight: $fn-weight-semi;
+  color: $fn-grey-light;
+  font-size: $fn-size12;
+  line-height: 24px;
+  background-color: $bg-white;
 }
 
 .feedback__item select {
-  position: relative;
   padding: 0 0 0 16px;
   width: 280px;
   min-height: 48px;
@@ -244,15 +174,34 @@
   line-height: 24px;
   color: $fn-grey-dark;
   cursor: pointer;
-  background: #FFFFFF;
+  background: transparent;
   appearance: none;
 
-  &:hover {
-    border: 1px solid blue;
+  &:hover,
+  &:focus {
+    outline: 2px solid $bg-pink;
   }
 }
 
 .feedback__item select::-ms-expand {
+  display: none;
+}
+
+.feedback__item--select {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url("../img/icon-open.svg");
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 12px;
+    pointer-events: none;
+  }
+}
+
+.feedback__item--active-select .feedback__label-select {
   display: none;
 }
 
@@ -266,7 +215,6 @@
   background: $bg-white;
   box-shadow: 0px 8px 24px rgba(57, 96, 204, 0.48);
   border-radius: 1px;
-  cursor: pointer;
   font-family: $fn-name;
   font-style: normal;
   font-weight: $fn-weight-semi;
@@ -274,10 +222,15 @@
   align-items: center;
   line-height: 24px;
   color: $fn-red;
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    border: 1px solid blue;
+    outline: 2px solid $bg-pink;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

@@ -10,6 +10,10 @@
   margin: 20px auto;
   width: 111px;
   height: 24px;
+
+  &:focus {
+    outline: 2px solid $bg-pink;
+  }
 }
 
 .page-footer__block {
@@ -95,9 +99,11 @@
   font-weight: $fn-weight-semi;
   font-size: $fn-size12;
   color: $fn-grey-dark;
+  outline: none;
 
-  &:hover {
-    color: blue;
+  &:hover,
+  &:focus {
+    color: $fn-red;
   }
 
   &:active {

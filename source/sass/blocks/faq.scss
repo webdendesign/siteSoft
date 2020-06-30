@@ -35,6 +35,15 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $bg-pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .faq__toggle--open {

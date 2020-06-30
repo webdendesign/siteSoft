@@ -15,6 +15,10 @@
   width: 111px;
   height: 24px;
   margin-right: 20px;
+
+  &:focus {
+    outline: 2px solid $bg-pink;
+  }
 }
 
 .page-header__logo svg {
@@ -32,6 +36,10 @@
   cursor: pointer;
   border: none;
   background: transparent;
+
+  &:focus {
+    outline: 2px solid $bg-pink;
+  }
 }
 
 @media (min-width: $tablet-width) {

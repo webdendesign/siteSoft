@@ -30,6 +30,7 @@
   font-weight: $fn-weight-semi;
   font-size: $fn-size12;
   color: $fn-grey-dark;
+  outline: none;
 
   &--active {
     position: relative;
@@ -43,6 +44,15 @@
       height: 1px;
       background: $fn-red;
     }
+  }
+
+  &:hover,
+  &:focus {
+    color: $fn-red;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -72,7 +82,7 @@
   color: $fn-grey-dark;
 }
 
-.popular__description{
+.popular__description {
   margin: 0;
 }
 
@@ -84,9 +94,7 @@
 
   .popular__link {
     &::before {
-      left: -10px;
       bottom: -19px;
-      width: 170%;
     }
   }
 

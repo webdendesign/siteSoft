@@ -119,13 +119,13 @@
             <h2 class="popular__title">Popular</h2>
             <ul class="popular__menu">
               <li class="popular__item">
-                <a class="popular__link popular__link--active" href="#">Today</a>
+                <a class="popular__link popular__link--active" href="javascript://">Today</a>
               </li>
               <li class="popular__item">
-                <a class="popular__link" href="#">This week</a>
+                <a class="popular__link" href="javascript://">This week</a>
               </li>
               <li class="popular__item">
-                <a class="popular__link" href="#">Month</a>
+                <a class="popular__link" href="javascript:void(0)">Month</a>
               </li>
             </ul>
           </div>
@@ -156,7 +156,7 @@
 
     <section class="content">
       <div class="content__header slider">
-        <div id="active-slide">
+        <div class="slider__active">
           <button class="slider__arrow-left" id="prewbutton"><span class="visually-hidden">Сдвинуть
               влево</span>
             <svg class="slider__left" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -184,7 +184,7 @@
               </g>
             </svg>
           </button>
-          <div id="slider-wrap">
+          <div class="slider__wrap">
             <div class="slide"><img src="img/bg-fog.jpg" alt="fog"></div>
             <div class="slide"><img src="img/bg-mountain.jpg" alt="mountain"></div>
           </div>
@@ -308,20 +308,20 @@
               <legend><span class="visually-hidden">Feedback</span></legend>
               <ul class="feedback__list">
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" id="first name" required="">
-                  <label class="feedback__label feedback__label--first-name" for="first name"></label>
+                  <label class="feedback__label" for="first-name">First name</label>
+                  <input class="feedback__input" type="text" id="first-name">
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="last name" required="">
-                  <label class="feedback__label feedback__label--last-name" for="last name"></label>
+                  <label class="feedback__label" for="last-name">Last name</label>
+                  <input class="feedback__input" type="text" id="last-name">
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="email" name="email">
-                  <label class="feedback__label feedback__label--email" for="email"></label>
+                  <label class="feedback__label" for="email">Email</label>
+                  <input class="feedback__input" type="email" id="email">
                 </li>
                 <li class="feedback__item">
-                  <input class="feedback__input" type="text" name="address" required="">
-                  <label class="feedback__label feedback__label--address" for="address"></label>
+                  <label class="feedback__label" for="address">Address</label>
+                  <input class="feedback__input" type="text" id="address">
                 </li>
                 <li class="feedback__item feedback__item--checkbox">
                   <label class="feedback__checkbox">
@@ -331,15 +331,13 @@
                       information about myself</span>
                   </label>
                 </li>
-                <li class="feedback__item">
-                  <label class="feedback__label-select">
-                    <select class="feedback__select">
-                      <option></option>
-                      <option>Latvia</option>
-                      <option>Finland</option>
-                      <option>Russia</option>
-                    </select>
-                  </label>
+                <li class="feedback__item feedback__item--select">
+                  <label class="feedback__label-select">Country</label>
+                  <select class="feedback__select">
+                    <option>Russia</option>
+                    <option>Latvia</option>
+                    <option>Finland</option>
+                  </select>
                 </li>
               </ul>
             </fieldset>
@@ -403,8 +401,9 @@
   </footer>
 
   <script src="js/menu.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/form.js"></script>
 
 </body>
 
