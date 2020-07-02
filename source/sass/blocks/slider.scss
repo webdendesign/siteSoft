@@ -31,25 +31,24 @@
 
 .slider__arrow-left {
   left: 0;
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    content: url("../../img/icon-left.svg");
+  }
 }
 
 .slider__arrow-right {
   right: 0;
-}
 
-.slider__left,
-.slider__right {
-  position: absolute;
-  top: 5px;
-}
-
-.slider__left {
-  left: 5px;
-}
-
-.slider__right {
-  right: 5px;
-  transform: rotate(180deg);
+  &::before {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    content: url("../../img/icon-right.svg");
+  }
 }
 
 .slider__wrap {
@@ -89,19 +88,22 @@
     top: 290px;
     width: 52px;
     height: 52px;
+
+    &::before {
+      top: 15px;
+    }
   }
 
-  .slider__left,
-  .slider__right {
-    top: 15px;
+  .slider__arrow-left {
+    &::before {
+      left: 13px;
+    }
   }
 
-  .slider__left {
-    left: 13px;
-  }
-
-  .slider__right {
-    right: 13px;
+  .slider__arrow-right {
+    &::before {
+      right: 13px;
+    }
   }
 
   .slide img {
@@ -117,16 +119,22 @@
     height: 72px;
   }
 
-  .slider__left,
-  .slider__right {
-    top: 25px;
+  .slider__arrow-left,
+  .slider__arrow-right {
+    &::before {
+      top: 25px;
+    }
   }
 
-  .slider__left {
-    left: 20px;
+  .slider__arrow-left {
+    &::before {
+      left: 20px;
+    }
   }
 
-  .slider__right {
-    right: 20px;
+  .slider__arrow-right {
+    &::before {
+      right: 20px;
+    }
   }
 }

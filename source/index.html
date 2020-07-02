@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <script src="jquery-3.2.1.min.js"></script>
   <script>
     document.createElement("picture");
@@ -20,14 +20,16 @@
 <body>
 
   <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
+    <include src="source/img/sprite.svg"></include>
   </div>
 
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__container">
         <a class="page-header__logo" href="#">
-          <img src="img/icon-logo.svg" width="111" height="24" alt="logo">
+          <svg class="main-nav__burger" width="111" height="24">
+            <use xlink:href="#icon-menu-logo"></use>
+          </svg>
         </a>
         <select class="page-header__select" name="language">
           <option>in English</option>
@@ -37,17 +39,11 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__container">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
-            <svg class="main-nav__burger" version="1.0" xmlns="http://www.w3.org/2000/svg" width="49.945"
-              height="24.007">
-              <path
-                d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z" />
-              <path
-                d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z" />
+            <svg class="main-nav__burger" width="50px" height="24px">
+              <use xlink:href="#icon-menu-burger"></use>
             </svg>
-            <svg class="main-nav__cross" version="1.0" xmlns="http://www.w3.org/2000/svg" width="23.867"
-              height="23.867">
-              <path
-                d="M15.087 11.933l8.56-8.559a.75.75 0 000-1.061L21.554.22a.747.747 0 00-1.06 0l-8.561 8.56L3.373.22a.771.771 0 00-1.061 0L.22 2.313a.75.75 0 000 1.061l8.56 8.559-8.56 8.559a.751.751 0 000 1.062l2.093 2.094a.744.744 0 001.06 0l8.561-8.56 8.56 8.56a.746.746 0 001.06 0l2.093-2.094a.751.751 0 000-1.062l-8.56-8.559z" />
+            <svg class="main-nav__cross" width="24px" height="24px">
+              <use xlink:href="#icon-menu-cross"></use>
             </svg>
           </button>
         </div>
@@ -157,32 +153,9 @@
     <section class="content">
       <div class="content__header slider">
         <div class="slider__active">
-          <button class="slider__arrow-left" id="prewbutton"><span class="visually-hidden">Сдвинуть
-              влево</span>
-            <svg class="slider__left" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
-                <path d="M17.835 3.86998L16.055 2.09998L6.165 12L16.065 21.9L17.835 20.13L9.705 12L17.835 3.86998Z"
-                  fill="white" />
-              </mask>
-              <g mask="url(#mask0)">
-                <rect width="24" height="24" fill="#373B52" />
-              </g>
-            </svg>
+          <button class="slider__arrow-left"><span class="visually-hidden">Сдвинуть влево</span>
           </button>
-          <button class="slider__arrow-right" id="nextbutton"><span class="visually-hidden">Сдвинуть
-              вправо</span>
-            <svg class="slider__right" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="2" width="12" height="20">
-                <path
-                  d="M6.16504 20.13L7.93504 21.9L17.835 12L7.93504 2.09998L6.16504 3.86998L14.295 12L6.16504 20.13H6.16504Z"
-                  fill="white" />
-              </mask>
-              <g mask="url(#mask0)">
-                <rect width="24" height="24" fill="#373B52" />
-              </g>
-            </svg>
+          <button class="slider__arrow-right"><span class="visually-hidden">Сдвинуть вправо</span>
           </button>
           <div class="slider__wrap">
             <div class="slide"><img src="img/bg-fog.jpg" alt="fog"></div>
@@ -353,7 +326,9 @@
     <div class="container">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="#">
-          <img src="img/icon-logo.svg" width="111" height="24" alt="logo">
+          <svg class="main-nav__burger" width="111" height="24">
+            <use xlink:href="#icon-menu-logo"></use>
+          </svg>
         </a>
         <div class="page-footer__block">
           <ul class="page-footer__offer-list">
