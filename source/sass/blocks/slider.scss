@@ -36,7 +36,9 @@
     position: absolute;
     top: 4px;
     left: 5px;
-    content: url("../../img/icon-left.svg");
+    width: 24px;
+    height: 24px;
+    content: url("../img/icon-left.svg");
   }
 }
 
@@ -47,7 +49,9 @@
     position: absolute;
     top: 4px;
     right: 5px;
-    content: url("../../img/icon-right.svg");
+    width: 24px;
+    height: 24px;
+    content: url("../img/icon-right.svg");
   }
 }
 
